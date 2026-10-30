@@ -1,0 +1,6 @@
+{
+  "name": "From the Gecko",
+  "description": "Administrative control plane and verification suite for the Bezalel sender and Exante Aspen immutable ledger and audit trail with the Gecko Hologram.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

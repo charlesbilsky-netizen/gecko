@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@keyframes holoFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.4deg);
+  }
+}
+
+@keyframes holoBeam {
+  0%, 100% {
+    opacity: 0.35;
+    filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.4));
+  }
+  50% {
+    opacity: 0.65;
+    filter: drop-shadow(0 0 25px rgba(0, 210, 132, 0.7));
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+@keyframes holoPulseRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.4;
+  }
+}
+
+.animate-holo-float {
+  animation: holoFloat 4s ease-in-out infinite;
+}
+
+.animate-holo-beam {
+  animation: holoBeam 3s ease-in-out infinite;
+}
+
+.animate-scanline {
+  animation: scanline 3.5s linear infinite;
+}
+
+.animate-holo-ring {
+  animation: holoPulseRing 2.5s ease-in-out infinite;
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.reduced-motion,
+.reduced-motion *,
+.reduced-motion ::before,
+.reduced-motion ::after {
+  animation: none !important;
+  transition: none !important;
+}
